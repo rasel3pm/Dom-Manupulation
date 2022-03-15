@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manupulation</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="h1">This Is Heading</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab esse error exercitationem hic a quis sed est repellat excepturi, vel itaque recusandae odio! Adipisci laboriosam ipsa eligendi nam. Corrupti, nulla.</p>
+        <div class="box" id="box">
+            <h3>Box</h3>
+        </div>
+        <button id="btn1">Button 1</button>
+        <button id="btn2">Button 2</button>
+
+        <!-- <form action=""><br>
+            <input type="text" placeholder="fast name"><br><br>
+            <input type="password" name="" id="" placeholder="Password"><br>
+            <input type="range" name="" id=""><br>
+            <input type="checkbox" min="10" max="100" name="" id=""><br>
+            <input type="color" name="" id="">
+        </form> -->
+
+        <div id="popup" class="popup" style="width: 300px; height: 200px; background-color: aqua; text-align: center; display: none;">
+            <h1>hellow</h1>
+
+            <button id="close">Close</button>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    var btn2 = document.getElementById('btn2');
+    btn2.addEventListener("click", function() {
+        document.body.style.backgroundColor = ''
+        var popup = document.getElementById('popup');
+        popup.style.display = 'block'
+    })
+    var closebtn = document.getElementById('close');
+    closebtn.addEventListener("click", function() {
+        var popup = document.getElementById('popup');
+        popup.style.display = 'none'
+    })
+
+    var btn1 = document.getElementById('btn1');
+    btn1.addEventListener("click", function() {
+        var sty = document.getElementById('h1');
+        sty.innerText = 'I am Button 1'
+        sty.style.color = 'red'
+        sty.style.textAlign = 'center'
+        sty.style.fontSize = '50px'
+        var box = document.getElementById('box');
+
+        box.style.backgroundColor = 'yellow'
+        box.style.textAlign = 'center'
+        var prara = document.createElement('p')
+        var mama = 'Rasel kibria'
+        document.body.style.backgroundColor = 'tomato'
+    })
+</script>
