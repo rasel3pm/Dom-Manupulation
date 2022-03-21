@@ -18,24 +18,67 @@
         <button id="btn1">Button 1</button>
         <button id="btn2">Button 2</button>
 
-        <!-- <form action=""><br>
-            <input type="text" placeholder="fast name"><br><br>
-            <input type="password" name="" id="" placeholder="Password"><br>
-            <input type="range" name="" id=""><br>
-            <input type="checkbox" min="10" max="100" name="" id=""><br>
-            <input type="color" name="" id="">
-        </form> -->
+
 
         <div id="popup" class="popup" style="width: 300px; height: 200px; background-color: aqua; text-align: center; display: none;">
-            <h1>hellow</h1>
 
+            <form action=""><br>
+                <input type="text" placeholder="fast name"><br><br>
+                <input type="password" name="" id="" placeholder="Password"><br>
+                <input type="range" name="" id=""><br>
+                <input type="checkbox" min="10" max="100" name="" id=""><br>
+                <input type="color" name="" id="">
+            </form>
             <button id="close">Close</button>
         </div>
+    </div>
+    <div class="partTwo">
+        <input id="input" type="text" placeholder="Name">
+
+        <button id="name">Add Name</button>
+        <h1><span id="show">Rasel</span></h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td id="table_name"></td>
+                    <td>Info</td>
+                    <td>858476545</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
 
 </html>
 <script>
+    var nameBtn = document.getElementById('name');
+    nameBtn.addEventListener("click", function() {
+        var nameInput = document.getElementById('input').value;
+        document.getElementById('table_name').innerText = nameInput;
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     var btn2 = document.getElementById('btn2');
     btn2.addEventListener("click", function() {
         document.body.style.backgroundColor = ''
